@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes, force:appHostable"  access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="returnRecordId" type="String" />
+
+    <div class="slds-box">
+  		<p>
+  			<lightning:button variant="brand" label="Back to previous" onclick="{! c.goBack }" />
+  			<lightning:button variant="brand" label="Create Record" onclick="{! c.goBack }" />
+  		</p>
+	</div>
+    
+</aura:component> 

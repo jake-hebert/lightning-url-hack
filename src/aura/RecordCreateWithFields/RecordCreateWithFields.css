@@ -1,0 +1,8 @@
+.THIS.slds-box {
+	background-color: rgb(255, 255, 255);
+}
+.THIS.inner{
+	margin: 0 auto;
+	width: 25%;
+	background-color: grey;
+}

@@ -1,0 +1,25 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		This component exists to replace JavaScript buttons. 
+
+		You MUST pass params through the URL. Otherwise, it ain't gonna work.
+
+		Due to new security stuff in a critical update, any query param in a URL must have a prefix.
+		in this org, we will use the bogus prefix of "THS__" to pass params, then we will strip it out
+		when we process. Awful, but it's the only way I could make it work.
+
+		REQUIRED:
+		Object - this is the API name of the object that you want to create
+		ReturnRecId - this is the Id of the record to return to if the user clicks "Go Back"
+		RecTypeId - this can actually be left out or null if there is no record type that needs to be passed. 
+		
+		OTHER PARAMS:
+		*** URL ENCODE EVERYTHING HERE! ***
+		Any API name of a field that you want to pass + a URL encoded value.
+		You can add as many as you want or as few as just 1. Or technically none I suppose if you just really enjoy work?
+	
+		Example URL to pass: 
+		"https://tms--tmsfull.lightning.force.com/lightning/n/CreateRecord?THSObject=THS__Account{ampersand}THSName=THS__ExampleName";
+	</aura:example>
+</aura:documentation>
