@@ -1,0 +1,18 @@
+{
+    "projectName": "LightningUrlHack",
+    "username": "jake@lightningurlhack.com",
+    "id": "d5b14890-5726-11e9-b867-738e6ac46b8e",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na91.salesforce.com",
+    "workspace": "C:\\Users\\Jake\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}
