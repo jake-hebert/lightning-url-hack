@@ -3,7 +3,7 @@
         var pageURL = window.location.href; //get the whole decoded URL of the page.
         
 		if(pageURL.indexOf("?") != -1){ // Only attempt this if we got parameters. If not, this fittin to break
-			var rePrefix = new RegExp('THS__', "g");
+			var rePrefix = new RegExp('c__', "g");
 			var params = pageURL.slice((-(pageURL.length - pageURL.indexOf("?"))+1));
 			params =  params.replace(rePrefix,''); //remove fake prefix - see aura documentation for details
 	        var URLVariables = params.split('&'); //Split by & so that you get the key value pairs separately in a list

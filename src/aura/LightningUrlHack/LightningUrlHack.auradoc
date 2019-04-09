@@ -1,0 +1,30 @@
+<aura:documentation>
+	<aura:description>
+		This component exists to replace JavaScript buttons. 
+
+		IMPORTANT NOTES:
+		-- PACKAGE PREFIXES
+		Due to new security stuff in a critical update (I believe it was Summer 2018?), any query param in a URL for a lightning component
+		must have a prefix. We are using the prefix "c__" to append to all fields without a prefix, then stripping that bogus prefix out 
+		when processing.
+		-- APOSTROPHES
+		(After much trial and error) Passing an apostrophe, even if it's URL encoded, apparently breaks lightning. So the solution I've put
+		in place is to replace any apostrophe when building the URL with "xxapostrophexx". This value will be de-encoded as an apostrophe in
+		the js controller.
+
+		SPECIFIC REQUIRED PARAMS:
+		c__Object - this is the API name of the object that you want to create
+		c__ReturnRecId - this is the Id of the record to return to if the user clicks "Go Back"
+		c__RecTypeId - this can actually be left out or null if there is no record type that needs to be passed. 
+		
+		OTHER PARAMS:
+		*** URL ENCODE EVERYTHING HERE! ***
+		Any API name of a field that you want to pass + a URL encoded value.
+		You can add as many as you want or as few as just 1. Or technically none I suppose, but then what are you even doing with your life?
+
+		Here are a couple of example URLs that you could use. This could come from a vf page, a url button, even from an excel document or something!
+		Example URL to pass: (note that the value populating Custom_Field_2 has an apostrophe)
+		"../lightning/n/CreateRecord?c__Object=Account&amp;c__Name=Salesforce&amp;c__Custom_Field__c=URL%20Encoded%20Value&amp;c__Custom_Field2__c=Jakexx&amp;c__ReturnRecId=001000000000ZYXasd&amp;c__RecTypeId=012000000000ASDzyx"
+
+	</aura:description>
+</aura:documentation>
