@@ -4,8 +4,10 @@
         
 		if(pageURL.indexOf("?") != -1){ // Only attempt this if we got parameters. If not, this fittin to break
 			var rePrefix = new RegExp('c__', "g");
+			var dubUnderscore = new RegExp('DBLUND', "g");
 			var params = pageURL.slice((-(pageURL.length - pageURL.indexOf("?"))+1));
 			params =  params.replace(rePrefix,''); //remove fake prefix - see aura documentation for details
+			params = params.replace(dubUnderscore,'__'); // even more replacing for double underscores
 	        var URLVariables = params.split('&'); //Split by & so that you get the key value pairs separately in a list
 	        var i;
 	        var oppId;
